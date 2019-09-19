@@ -9,13 +9,13 @@ This example shows how to implement a **REST API** using [Express.JS](https://ex
 Clone the repository:
 
 ```
-git clone git@github.com:prisma/prisma-examples.git
+git clone https://github.com/sonn68/resapi-prisma.git
 ```
 
 Install Node dependencies:
 
 ```
-cd prisma-examples/node/rest-express
+cd restpai-prisma
 npm install
 ```
 
