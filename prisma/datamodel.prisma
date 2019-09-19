@@ -1,0 +1,39 @@
+type Post {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  published: Boolean! @default(value: false)
+  title: String!
+  content: String
+}
+
+type User {
+  id: ID! @id
+  email: String! @unique
+  password: String!
+  name: String
+  posts: [Post!]!
+  role: Role! @default(value: CUSTOMER)
+}
+
+enum Role {
+  ADMIN
+  CUSTOMER
+}
+
+type Unit {
+    id: ID! @id
+    unit: String!
+    lessons: [Lesson!]!
+}
+
+type Lesson {
+  id: ID! @id
+  title: String!
+}
+
+type Class {
+  id: ID! @id
+  name: String!
+  units: [Unit!]!
+}
